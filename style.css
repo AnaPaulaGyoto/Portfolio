@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+:root {
+--cor-1: rgb(230, 187, 243);
+--cor-2: #eae2ee;
+--cor-3: rgb(0, 0, 0);
+--cor-4: #a675c0;
+--cor-5: rgba(178, 104, 197, 0.726); 
+--cor-6: #41085f;
+}
+
+@font-face {
+    font-family:"fonte-chique";
+    src: url("Maglisto.otf") format("opentype") ;
+}
+
+@keyframes spin{
+   0%{
+    transform: rotate(125deg);
+  }
+
+   50%{
+    transform: rotate(-100deg);
+   }
+
+
+   100%{
+     transform: rotate(125deg)
+     
+  }
+}
+
+@keyframes up{
+  0%{
+    transform: translateY(15vh);
+  }
+
+
+  50%{
+    transform: translateY(-10vh);
+    
+  }
+
+  100%{
+    transform: translateY(0vh);
+  }
+}
+
+
+@keyframes carrosel{
+  0%{
+    transform: translateX(0);
+
+  }
+
+  100%{
+    transform: translateX(-50%);
+  }
+
+}
+
+.emphasis{
+    color: var(--cor-6);
+
+}
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ 
+}
+
+body{
+    background-color: var(--cor-2);
+    font-family: "fonte-chique";
+    font-size: 1.125rem;
+    font-weight: 400;
+  
+}
+
+
+ul, li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+    margin: 1.5rem;
+    display: flex;
+
+}
+
+nav{
+    margin: 0.250rem;
+    flex: 1;
+    color: var(--cor-4);
+    
+}
+
+ul{
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    cursor: pointer;
+}
+
+li{
+   font-weight: 500;
+}
+
+li:hover{
+    color: var(--cor-6);
+    transition: all 0.9s  ease;
+}
+
+#hero{
+    margin-top: 10.5rem;
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    align-items: flex-start;
+    justify-items: flex-end;
+    
+    
+}
+
+.projetos{
+  font-size: 2.5rem;
+   line-height: 1.8rem;
+   margin:4.5rem; 
+}
+
+article{
+    margin: 1.600rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+p{
+   font-size: 1.5rem;
+   line-height: 1.8rem;
+}
+
+.title{
+    font-size: 5.5rem;
+    font-weight: bolder;
+    line-height: 3.5rem;
+    
+}
+
+
+.frame{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5rem;
+    margin: -6em;
+    animation:up 7s ease 0s normal;
+    margin-right: 3.5rem;
+    z-index: -1;
+
+   
+   
+    
+}
+
+
+img > .estrelas{
+    width: 20.25rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  
+    
+    
+
+    
+}
+
+
+button{
+  font-family: "fonte-chique";
+  font-size: 1.563rem;
+  background-color: var(--cor-7);
+  border-radius: 1.875rem 3.75rem;
+  padding: 0.375rem;
+  width: 8.25rem;
+  height: 2.5rem;
+  border: 2px solid var(--cor-4);
+  color: var(--cor-6);
+}
+
+button:hover{
+  transition: all 0.3s  ease-in-out;
+  scale: 1.1;
+  background-color: var(--cor-4);
+  color: var(--cor-2);
+}
+
+
+.estrela{
+  position: relative;
+  bottom: 31.125rem;
+  right: 36.2rem;
+  z-index: -1;
+  animation:spin 5.5s ease-in-out 0s infinite ;
+}
+
+.carousel-container{
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--cor-2);
+  padding: 10px 0;
+ 
+
+}
+
+.card{
+  flex: 0 0 auto;
+  width: 500px;
+  height: 300px;
+  background: rgb(60, 1, 60);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 20px;
+  margin: 0 10px;
+ 
+   
+}
+
+
+
+
+.carousel-track{
+  display: flex;
+  width: max-content;
+  animation: carrosel 60s linear infinite;
+}
+
+
+.carousel-container:hover .carousel-track{
+  animation-play-state: paused;
+}
+
+
+.hist{
+  font-size: 2.5rem;
+  line-height: 1.8rem;
+  margin: -5.5rem;
+  padding: 9.5rem;
+}
