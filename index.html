@@ -4,68 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Potfólio</title>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <title>Portfólio</title>
 </head>
 <body>
- <header>
+
+<header>
     <div> Ana Paula<span class="emphasis">.</span></div>
     <nav>
-    <ul>
-        <li> Home</li>
-        <li> Contato</li>
-        <li> Projetos</li>
-    </ul>
-   </nav>
- </header>
-  
+        <ul>
+            <li>Home</li>
+            <li>Contato</li>
+            <li>Projetos</li>
+        </ul>
+    </nav>
+</header>
 
- <main>
-     <section id="hero">
+<main>
+    <section id="hero">
         <article>
             <p>Olá, eu sou a Ana! E eu sou uma </p>
             <p class="title">Front<span class="emphasis">End</span></p>
-            <p class="title"> Developer</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="title">Developer</p>
+            <p>Sou uma desenvolvedora de websites responsivos e dinâmicos, usando HTML, CSS e JavaScript.</p>
             <div style="display: flex; gap: 0.625rem;">
-                <button class="botao1"> Projetos</button>
-                <button class="botao2"> Contato</button>
+                <button class="botao1">Projetos</button>
+                <button class="botao2">Contato</button>
             </div>
         </article>
-         <div class="frame">
-            <img class="foto-de-perfil" width="1200px"  src="foto-de-perfil.png"> 
-            <!--<img class="" width="550px" src="imagem/6600a945f094a26b365f489682456bb3-removebg-preview.png">-->
+
+        <div class="frame">
+            <img class="foto-de-perfil" width="400px" src="foto-de-perfil.png">
         </div>
-         <div>
+    </section>
+    <img class="estrela4" width="100px" src="estrela4-removebg-preview.png" >
+      
+ <section class="slider">
+ <div class="swiper">
+  <div class="swiper-wrapper">
+     <div class="swiper-slide">
+        <blockquote class="titulos">
             
-         </div>
-     </section>
+        </blockquote>
+     </div>
+     <div class="swiper-slide"></div>
+     <div class="swiper-slide"></div>
+     <div class="swiper-slide"></div>
+     <div class="swiper-slide"></div>
+     <div class="swiper-slide"></div>
+     <div class="swiper-slide"></div>
+     <div class="swiper-slide"></div>
+     <div class="swiper-slide"></div>
+  </div>
 
-     <section>
-        <div class="carousel-container">
-               <p class="projetos">Projetos<span class="emphasis">.</span></p>
-               <div class="carousel-track">
-               <div class="card"> </div> 
-               <div class="card"> </div>
-               <div class="card"> </div>
-               <div class="card"> </div>
-               <div class="card"> </div>
-               <div class="card"> </div>
-            
-               
-        </div>
-     </section>
 
-     <section class="historia">
-        <article>
-            <p class="hist"><span class="emphasis"></span></p>
-        </article>
-        
+     <div class="swiper-pagination"></div>
+     <div class="swiper-button-prev"></div>
+     <div class="swiper-button-next"></div>
 
-     </section>
- </main>
+  </div>
 
- <footer>
+    </section>
+   
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
- </footer>
+ <script>
+  const swiper = new Swiper('.swiper',  {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+ 
+    breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 18
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 18
+    },
+    1188: {
+      slidesPerView: 3,
+      spaceBetween: 24
+    }
+  }
+});
+
+
+</script>
+
+
+
+
+</main>
+
+<footer>
+</footer>
+
+
+
+
 </body>
+</html>
+
 </html>

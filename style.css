@@ -47,14 +47,14 @@
 }
 
 
-@keyframes carrosel{
+@keyframes scaly{
   0%{
-    transform: translateX(0);
+    transform: scale(0);
 
   }
 
   100%{
-    transform: translateX(-50%);
+    transform: scale(1);
   }
 
 }
@@ -111,7 +111,7 @@ ul{
 
 li{
    font-weight: 500;
-   transition: all 0.9s  ease;
+   transition: all 0.5s  ease;
 }
 
 li:hover{
@@ -120,7 +120,6 @@ li:hover{
 }
 
 #hero{
-    margin-top: 10.5rem;
     display: grid;
     grid-template-columns: repeat(2 ,1fr);
     align-items: flex-start;
@@ -136,7 +135,7 @@ li:hover{
 }
 
 article{
-    margin: 1.600rem;
+    margin: 10.6rem;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -161,27 +160,28 @@ p{
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-top: 3.5rem;
-    margin: -11rem;
+    margin: 10rem;
     z-index: -1;
-
-   
-   
-    
+    border: 15px solid var(--cor-6);
+    border-radius: 50%;    
 }
 
 
+
+
 img > .foto-de-perfil{
-    width: 20.25rem;
+    width: 15.25rem;
     aspect-ratio: 1/1;
     object-fit: cover;
   
     
-    
-
-    
+   
 }
 
+
+.projetos{
+  text-align: center;
+}
 
 button{
   font-family: "fonte-chique";
@@ -193,75 +193,51 @@ button{
   height: 2.5rem;
   border: 2px solid var(--cor-4);
   color: var(--cor-6);
-  transition: all 0.6s  ease-out;
+  transition: all 0.4s  ease-out;
 }
 
 button:hover{
-  transform: scale(1);
   background-color: var(--cor-4);
   color: var(--cor-2);
 }
 
 
-.estrela{
-  position: relative;
-  bottom: 31.125rem;
-  right: 36.2rem;
-  z-index: -1;
-  animation:spin 5.5s ease-in-out 0s infinite ;
-}
-
-.carousel-container{
-  width: 102%;
-  overflow: hidden;
-  background-color: var(--cor-2);
-  padding: 200px 0;
- 
+.swiper {
+  width: 100%;
+  max-width: 1800px;
+  height: 400px;
+  margin: 10px;
 
 }
 
-.card{
-  flex: 0 0 auto;
-  width: 500px;
-  height: 300px;
-  background: rgb(60, 1, 60);
+.swiper-slide {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   color: white;
+  font-size: 25px;
+  background: var(--cor-6);
+  border: 2px solid var(--cor-7);
   border-radius: 20px;
-  
-  padding: 20px 0;
-  transition: all 1s ease 0s;
-   
-   
- 
-   
-}
 
-.card:hover {
-  transform: scale(1.1);
-  background-color: #a675c0;
 }
 
 
-.carousel-track{
-  width: max-content;
-  flex-direction: column;
-  gap: 3em;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  margin: 3.5rem;
- 
+.swiper-slide:hover{
+  background: var();
   
 }
 
+.titulos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  
+}
 
-.
-
-
-.hist{
-  font-size: 2.5rem;
-  line-height: 1.8rem;
-  margin: -5.5rem;
-  padding: 9.5rem;
+.estrela4{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
